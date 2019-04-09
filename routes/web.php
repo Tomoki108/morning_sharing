@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', 'HomeController@index');
+Route::post('/finished/{user}', 'HomeController@finished');
+Route::post('/volunteered/{user}', 'HomeController@volunteered');
+Route::post('/skipped/{user}', 'HomeController@skipped');
+Route::post('/cancel/{user}', 'HomeController@cancel');
